@@ -290,6 +290,7 @@ const modal_option_btn = document.querySelector(".option-game-btn");
 modal_start_btn.addEventListener('click', function () {
     updateScores();
     round_selection.forEach(round => round.checked = false); //reset the round selection
+    confirm_round_btn.classList.add("disabled");
     modal_start.style.display = "none";
     modal_rounds.style.display = "flex";
 });
