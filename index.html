@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="page-grid" data-round="0">
+        <header class="page-header">
+            <div class="brand-container">
+
+            </div>
+            <div class="game-bar">
+                <div class="user score-bar">
+                    <div class="score-info">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="score">Your Score:
+                            <span id="user-score">
+                                0
+                            </span>
+                        </p>
+                    </div>
+                    <p class="score-position spu">
+                        Goodluck!
+                    </p>
+                </div>
+                <div class="round-content">
+                    <i class="fa-solid fa-shield-halved" style="font-size:25px;"></i>
+                    <h2>
+                        <span class="round">1</span>
+                        <span>/</span>
+                        <span class="sub-round">10</span>
+                    </h2>
+                </div>
+                <div class="ai score-bar">
+                    <div class="score-info sci right">
+                        <i class="fa-solid fa-robot"></i>
+                        <p class="score" style="text-align:right;">A.I Score:
+                            <span id="ai-score">
+                                0
+                            </span>
+                        </p>
+                    </div>
+                    <p class="score-position spa" style="text-align:right; width:100%;">
+                        Goodluck!
+                    </p>
+                </div>
+            </div>
+        </header>
+        <main class="page-main">
+            <div class="match-table">
+                <div class="user-side side" style="--delay: 1s;">
+                    <img src="assets/images/picks/user-rock.png" class="pick-img user-p">
+                </div>
+                <div class="round-container side">
+                    <h2 class="r-counter">
+                        <i class="fa-solid fa-circle-notch fa-spin" style="font-size:50px;"></i>
+                    </h2>
+                    <p class="picking-text">Please Pick...</p>
+                </div>
+                <div class="ai-side side" style="--delay: 2s;">
+                    <img src="assets/images/picks/ai-rock.png" class="pick-img ai-p">
+                </div>
+            </div>
+            <div class="pick-table">
+                <div class="pick rock" style="--textContent: 'Rock';" data-pick-type="rock">
+                    <img src="assets/images/rock_img.png" class="rps-img rock">
+                </div>
+                <div class="pick paper" style="--textContent: 'Paper';" data-pick-type="paper">
+                    <img src="assets/images/paper_img.png" class="rps-img paper">
+                </div>
+                <div class="pick scissor" style="--textContent: 'Scissor';" data-pick-type="scissor">
+                    <img src="assets/images/scissor_img.png" class="rps-img scissor">
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    <!-- Modal here -->
+    <div class="modal-area">
+        <div class="modal-start">
+            <div class="title">
+                <h1 class="gameTitle">
+                    Rock Paper Scissor
+                </h1>
+                <p class="sub-game-title">Simple Javascript Game</p>
+            </div>
+            <div class="button-collections">
+                <button type="button" class="start-game-btn">
+                    <i class="fa-solid fa-play"></i>
+                    <span>Start</span>
+                </button>
+            </div>
+            <div class="copyright">
+                <p class="cpy-text">
+                    Copyright &copy; Archie Sevillano 2023
+                </p>
+            </div>
+        </div>
+        <div class="modal-ok">
+            <h1 class="modal-ok-result"></h1>
+            <p
+                style="color:var(--clean); font-family:var(--main-font); letter-spacing:2px; font-size:14px;text-align:center;">
+                Click 'OK'
+                to continue</p>
+            <button type="button" class="modal-btn ok-btn">OK</button>
+        </div>
+        <div class="modal-rounds">
+            <h2>Choose how many rounds:</h2>
+            <div class="round-collection">
+                <div class="row">
+                    <div class="round-option-container">
+                        <input type="radio" name="round-options" id="option1" value="5">
+                        <label class="round-option" for="option1">05</label>
+                    </div>
+                    <div class="round-option-container">
+                        <input type="radio" name="round-options" id="option2" value="10">
+                        <label class="round-option" for="option2">10</label>
+                    </div>
+                    <div class="round-option-container">
+                        <input type="radio" name="round-options" id="option3" value="15">
+                        <label class="round-option" for="option3">15</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="round-option-container">
+                        <input type="radio" name="round-options" id="option4" value="20">
+                        <label class="round-option" for="option4">20</label>
+                    </div>
+                    <div class="round-option-container">
+                        <input type="radio" name="round-options" id="option5" value="25">
+                        <label class="round-option" for="option5">25</label>
+                    </div>
+                    <div class="round-option-container">
+                        <input type="radio" name="round-options" id="option6" value="30">
+                        <label class="round-option" for="option6">30</label>
+                    </div>
+                </div>
+            </div>
+            <button class="confirm-rounds-btn disabled">
+                Confirm
+            </button>
+        </div>
+        <div class="modal-game-result">
+            <h2 id="game-result">You lose the game!</h2>
+            <p>Click 'Restart' to restart the game</p>
+            <div class="button-collection">
+                <button type="button" class="restart-btn">
+                    <i class="fa-solid fa-rotate-right"></i>
+                    Restart
+                </button>
+                <button type="button" class="exit-btn">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Exit
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="screen-mobile-view">
+        <h1
+            style="color:var(--clean); font-family:var(--button-font); text-align:center;font-size:15px;letter-spacing: 3px;">
+            This site
+            is currently
+            not available for Mobile View
+        </h1>
+    </div>
+    <!-- External Scripts Here -->
+    <script src="https://kit.fontawesome.com/bbbef04b10.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/scripts/script.js"></script>
+</body>
+
+</html>
