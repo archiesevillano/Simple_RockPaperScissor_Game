@@ -2,7 +2,7 @@
 window.addEventListener('resize', () => {
     const screen_x = window.innerWidth;
     const s_view = document.querySelector(".screen-mobile-view");
-    if (screen_x <= 700) {
+    if (screen_x <= 1000) {
         s_view.style.display = "flex";
     }
     else {
