@@ -11,7 +11,7 @@
     --button-font: 'Poppins', sans-serif;
     --background-base-shade: rgb(148, 248, 255);
     --background-shade: linear-gradient(0deg, rgba(148, 248, 255, 1) 0%, rgba(75, 182, 190, 1) 23%, rgba(34, 37, 37, 1) 100%);
-    --body-background: #050505;
+    --body-background: #f10808;
     --button-base: rgb(175, 186, 224);
     --button-shade: linear-gradient(18deg, rgba(175, 186, 224, 1) 0%, rgba(86, 138, 138, 1) 100%);
     --clean: #fcf9f9;
